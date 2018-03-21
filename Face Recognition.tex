@@ -59,11 +59,11 @@
 
     \begin{frame}
     \frametitle{Face Recognition}
-    \textbf{Define}: Face recognition system is a computer application for automatically identify or verifying a person from a digital image or video frame. In this system automatically searching of faces from the face databases, typically resulting in a group of facial images ranked by computer evaluated similarity.\\
+    \textbf{Define}: Face recognition system is a computer application for automatically identify or verifying a person from a digital image or video frame.\newline \newline
     "Face Recognition" generally involves two stages:
     \begin{itemize}
-    \item Face Detection, where a photo is searched to find any face (shown here as a green rectangle), then image processing cleans up the facial image for easier recognition.
-    \item Face Recognition, where that detected and processed face is compared to a database of known faces, to decide who that person is (shown here as red text).
+    \item \textbf{Face Detection}, where a photo is searched to find any face, then image processing cleans up the facial image for easier recognition.
+    \item \textbf{Face Recognition}, where that detected and processed face is compared to a database of known faces, to decide who that person is.
     \end{itemize}
     \end{frame}
 
@@ -136,9 +136,11 @@
      \begin{frame}
     \frametitle{Principle Component Analysis(PCA) and \par Linear Descriminant Analysis(LDA)}
     \begin{itemize}
-    \item PCA also known as \textbf{Karhunen Lower Transformation} is used to reduce the dimensionality. Its main aim is to reduce the data onto lower dimensional space also called as Eigen space by computing the Eigen values and Eigenvectors of dataset. The output of PCA is the input to LDA algorithm. It is based on Eigen value and Eigenvector.
-    \item The LDA computes the scatter matrix within class and scatter matrix between class thus separating the images within class increasing the recognition rate. After calculating the weight matrix Euclidian distance is calculated.
-    \item The PCA and LDA algorithms are based on an efficient computation of Eigen values and Eigenvectors. Many methods are used to compute Eigen value and Eigenvectors such as QR method, Gauss-Seidel method, Power method, Jacobi method etc. The Jacobi method is an iterative method to find eigen value and eigenvector of symmetric matrix.
+    \item The PCA and LDA algorithms are based on an efficient computation of Eigen values and Eigenvectors.
+    \item PCA also known as \textbf{Karhunen Lower Transformation} is used to reduce the dimensionality.
+    \item  In PCA the main aim is to reduce the data onto lower dimensional space also called as Eigen space by computing the Eigen values and Eigenvectors of dataset.
+    \item The LDA computes the scatter matrix within class and scatter matrix between class thus separating the images within class increasing the recognition rate.
+    \item The output of PCA is the input to LDA algorithm. It is based on Eigen value and Eigenvector.
     \end{itemize}
     \end{frame}     
    
@@ -166,8 +168,8 @@
     \end{frame}
     
       \begin{frame}
-    In above Block Diagram the Training module consists of Gray scale conversion module where in all colour images are converted into Gray scale images, a Gaussian filter module to filter the image using gaussian mask, Normalisation Module by subtracting the mean of all images from each image to normalize faces, and vector conversion module that convertes 2D image are converted into 1D row vector. \newline
-	Next the PCA followed by LDA algorithms are applied onto images after which database of images is obtained. This completes the Training phase of face recognition system.
+    In above Block Diagram the Training module consists of Gray scale conversion module where in \textbf{all colour images are converted into Gray scale images}, a \textbf{Gaussian filter} module to filter the image using gaussian mask, \textbf{Normalisation Module by subtracting the mean of all images} from each image to normalize faces, and vector conversion module that convertes 2D image are converted into 1D row vector. \newline \newline
+	Next the \textbf{PCA followed by LDA algorithms are applied onto images after which database of images} is obtained. This completes the Training phase of face recognition system.
        \end{frame}
 
     
@@ -179,7 +181,7 @@
     \end{frame}
     
      \begin{frame}
-    During the recognition phase of Face Recognition system the \textbf{unknown face} is first converted into \textbf{gray scale}. Next the test image is smoothened using \textbf{Gaussian filter}. Test image is \textbf{normalized} by subtracting the mean of images from test image. Now the image is converted from 2D to 1D row and then is transferred to LDA surface space by multiplying weight of PCA and LDA. \newline
+    During the recognition phase of Face Recognition system the \textbf{unknown face} is first converted into \textbf{gray scale}. Next the test image is smoothened using \textbf{Gaussian filter}. Test image is \textbf{normalized} by subtracting the mean of images from test image. Now the image is converted from 2D to 1D row and then is transferred to LDA surface space by multiplying weight of PCA and LDA. \newline 
 
 \textbf{Euclidian distance} is calculated between the LDA sub space of test image and all the LDA subspace images in the database. The minimum distance image is classified as recognized image.
        \end{frame}
@@ -199,7 +201,7 @@
     
     \begin{frame}
         \frametitle{Tools}
-    \textbf{Matlab}: In face detection using MATLAB program can be used to detect a face, eyes and upper body. Matlab is one of the leading software packages for numerical computation and it mainly deals with Matrices right from scalar to multidimensional matrices. Object detection and tracking are important in many computer vision applications, including activity recognition, automotive safety and surveillance. Presented here is an face detection using MATLAB system that can detect not only a human face but also eyes and upper body. \newline
+    \textbf{Matlab}: In face detection using MATLAB program can be used to detect a face, eyes and upper body. Matlab is one of the leading software packages for numerical computation and it mainly deals with Matrices right from scalar to multidimensional matrices.. \newline
 
 \textbf{OpenCV}: OpenCV is the most popular library for computer vision. Originally written in C/C++, it now provides bindings for Python.
     \end{frame}
